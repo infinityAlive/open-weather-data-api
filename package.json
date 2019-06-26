@@ -1,0 +1,34 @@
+{
+  "name": "api",
+  "version": "0.0.01",
+  "description": "天氣開放資料後端 api",
+  "main": "./dist/server.js",
+  "author": "sonicx7boyboyboy@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "start": "gulp babelJs && node dist/server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dayjs": "^1.8.14",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.2.7",
+    "xor-crypt": "^1.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.4",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0"
+  },
+  "engines": {
+    "node": "10.x"
+  }
+}
