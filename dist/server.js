@@ -24,7 +24,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 const app = (0, _express2.default)();
-const port = 8080;
+const port = process.env.PORT || 5000;
 const server = app.listen(port, () => {
   let host = server.address().address;
   let port = server.address().port;
@@ -37,4 +37,3 @@ app.use(_bodyParser2.default.urlencoded({
 }));
 app.use(_bodyParser2.default.json());
 app.use('/api', _router2.default);
-app.use(_express2.default.static(_path2.default.join(__dirname, 'public')));

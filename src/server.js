@@ -7,7 +7,7 @@ import path from 'path'
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
 
 const app = express()
-const port = 3000
+const port = process.env.PORT || 5000
 const server = app.listen(port, () => {
   let host = server.address().address
   let port = server.address().port
