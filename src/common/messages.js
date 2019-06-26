@@ -6,13 +6,13 @@ const HttpStatus = {
 }
 
 const LoginInfo = {
-  REGISTER_ACCOUNT_IS_EXISTED: 'Account is existed',
+  REGISTER_ACCOUNT_IS_EXISTED: 'Register failed, Account is existed',
   REGISTER_SUCCESS: 'Register successfully',
   REGISTER_FAILED: 'Register failed',
   LOGIN_SUCCESS: 'Login successfully',
   LOGIN_FAILED: 'Login failed',
-  LOGIN_PWD_DIFF: 'Password is wrong',
-  LOGIN_ACCOUNT_IS_EMPTY: 'Account is empty',
+  LOGIN_PWD_DIFF: 'Login failed, Password is wrong',
+  LOGIN_ACCOUNT_IS_EMPTY: 'Login failed, Account is empty',
   LOGOUT_SUCCESS: 'Logout successfully',
   LOGOUT_FAILED: 'Logout failed',
   TOKEN_IS_RIGHT: 'Token is right',
