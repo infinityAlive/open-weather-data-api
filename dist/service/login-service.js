@@ -52,7 +52,7 @@ loginService.register = async (account, password) => {
     _id: account
   });
 
-  if (loginInfo && loginInfo.length > 0) {
+  if (loginInfo && Object.keys(loginInfo).length > 0) {
     return _messages.LoginInfo.REGISTER_ACCOUNT_IS_EXISTED;
   }
 
