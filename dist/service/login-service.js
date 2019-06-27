@@ -31,7 +31,7 @@ loginService.retrieve = async (account, password) => {
     });
 
     if (loginInfo) {
-      const decryptedPwd = (0, _xorCrypt2.default)(loginInfo.password, _config2.default.secret);
+      const decryptedPwd = (0, _xorCrypt2.default)(loginInfo.password);
 
       if (decryptedPwd === password) {
         return _messages.LoginInfo.LOGIN_SUCCESS;
@@ -59,7 +59,7 @@ loginService.register = async (account, password) => {
   try {
     await mongodbCrud.insert('LoginInfo', {
       _id: account,
-      password: (0, _xorCrypt2.default)(password, _config2.default.key)
+      password: (0, _xorCrypt2.default)(password)
     });
     return _messages.LoginInfo.REGISTER_SUCCESS;
   } catch (error) {

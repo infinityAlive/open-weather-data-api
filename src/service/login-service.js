@@ -12,7 +12,7 @@ loginService.retrieve = async (account, password) => {
       })
 
     if (loginInfo) {
-      const decryptedPwd = xorCrypt(loginInfo.password, config.secret)
+      const decryptedPwd = xorCrypt(loginInfo.password)
       if (decryptedPwd === password) {
         return LoginInfo.LOGIN_SUCCESS
       } else {
@@ -41,7 +41,7 @@ loginService.register = async (account, password) => {
     await mongodbCrud.insert('LoginInfo',
       {
         _id: account,
-        password: xorCrypt(password, config.key)
+        password: xorCrypt(password)
       })
 
     return LoginInfo.REGISTER_SUCCESS
