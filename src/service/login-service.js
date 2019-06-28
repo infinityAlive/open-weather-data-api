@@ -1,6 +1,5 @@
 import xorCrypt from 'xor-crypt'
 import * as mongodbCrud from '../mongo-db-crud'
-import config from '../config'
 import { LoginInfo } from '../common/messages'
 
 const loginService = {}

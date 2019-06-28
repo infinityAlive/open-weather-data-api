@@ -32,12 +32,7 @@ const register = (request, response) => {
       const account = request.body.account;
       const password = request.body.password;
       const loginMessage = await _loginService2.default.register(account, password);
-
-      if (loginMessage.indexOf('failed') >= 0) {
-        response.status(_messages.HttpStatus.SERVER_ERROR_500).send(loginMessage);
-      } else {
-        response.status(_messages.HttpStatus.OK_200).send(loginMessage);
-      }
+      response.status(_messages.HttpStatus.OK_200).send(loginMessage);
     }
   });
 };

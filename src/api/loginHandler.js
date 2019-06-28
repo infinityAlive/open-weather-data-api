@@ -11,12 +11,7 @@ const register = (request, response) => {
       const account = request.body.account
       const password = request.body.password
       const loginMessage = await loginService.register(account, password)
-
-      if (loginMessage.indexOf('failed') >= 0) {
-        response.status(HttpStatus.SERVER_ERROR_500).send(loginMessage)
-      } else {
-        response.status(HttpStatus.OK_200).send(loginMessage)
-      }
+      response.status(HttpStatus.OK_200).send(loginMessage)
     }
   })
 }
